@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int gcd, a, b, r;
+    scanf("%d%d", &a, &b);
+
+    while(b!=0)
+    {
+        r=a%b;
+        a=b;
+        b=r;
+    }
+
+    gcd=a;
+    printf("%d", gcd);
+
+    return 0;
+}
