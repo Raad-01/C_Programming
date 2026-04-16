@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int t, i, j, n, r, count, sum;
+	scanf("%d", &t);
+	
+	for(i=1; i<=t; i++)
+	{
+		scanf("%d", &n);
+		count = 0;
+		
+		while(n!=0)
+		{
+			r = n%2;
+			if(r==1)
+				count++;
+			n = n/2;
+		}
+		
+		sum = 0;
+	
+		for(j=0; j<count; j++)
+		{
+			sum = sum + pow(2, j);
+		}
+		
+		printf("%d\n", sum);
+	}
+	
+	return 0;
+}
